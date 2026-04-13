@@ -1,0 +1,170 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Git Cheatsheet</title>
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  margin: 20px 40px;
+  max-width: 800px;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: disc;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+li {
+  margin: 0 0 10px;
+}
+
+code {
+  font-size: 16px;
+  color: #333;
+  background-color: #e9e9e9;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+}
+
+/* Center main content */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+}
+
+/* Background colors for sections */
+.git-section {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.git-section h2 {
+  margin: 0;
+}
+
+.git-section p {
+  margin: 10px 0;
+}
+
+.git-section ul {
+  margin: 20px 0;
+}
+
+.git-tip {
+  background-color: #e7e7e7;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<main>
+
+<section class="git-section">
+<h1>What is Git?</h1>
+<p>Git - version control system</p>
+<h1>What is GitHub?</h1>
+<p>GitHub - database to store code</p>
+</section>
+
+<section class="git-section">
+<h2>Git Basics</h2>
+<ul>
+  <li><code>git init</code> - initialize a git repository</li>
+  <li><code>git status</code> - tells us what is happening in the project</li>
+  <li><code>git add .</code> - add the changes in the "to be committed" list</li>
+  <li><code>git restore --staged <filename or folder></code> - to remove a file from the "to be committed" list</li>
+  <li><code>git commit -m "message"</code> - commits the changes to git history</li>
+  <li><code>git log</code> - check all the commits made</li>
+  <li><code>git reset <commit hash></code> - take your project back to that commit (all commits after that are deleted)</li>
+</ul>
+</section>
+
+<section class="git-section">
+<h2>Git Stash</h2>
+<ul>
+  <li><code>git stash</code> - to hide the changes you made (for example trying something new in your code and you want to remove the files but also don't want to commit them)</li>
+  <li><code>git stash pop</code> - reverting all the changes you made in the files you stashed</li>
+  <li><code>git stash clear</code> - to remove the changes permanently</li>
+</ul>
+</section>
+
+<section class="git-section">
+<h2>Git Remote & Pushing</h2>
+<ul>
+  <li><code>git remote add origin <url></code> - to attach a GitHub repo to a local project</li>
+  <li><code>git push origin master</code> - push changes to GitHub URL you attached your project with</li>
+</ul>
+</section>
+
+<section class="git-section">
+<h2>Branching and Merging</h2>
+<ul>
+  <li><code>git branch feature</code> - create a new branch called <code>feature</code></li>
+  <li><code>git checkout feature</code> - change branch to <code>feature</code> (i.e., all the commits will be on the <code>feature</code> branch and the <code>main</code> branch will be left as it is)</li>
+  <li><code>git merge feature</code> - now <code>feature</code> and <code>main</code> branch are merged</li>
+</ul>
+</section>
+
+<section class="git-section">
+<h2>Forking and Rebasing</h2>
+<ul>
+  <li><code>git remote add upstream <url></code> - upstream is the project from where you have forked the project and <code>origin</code> is your personal project</li>
+  <li><code>git fetch --all --prune</code> - to get all the fetches from upstream</li>
+  <li><code>git reset --hard upstream/master</code> - sync your local master with upstream master</li>
+  <li><code>git pull upstream master</code> - same as fetch and reset we did above</li>
+  <li><code>git rebase -i <commit hash></code> - to squash commits into one commit</li>
+</ul>
+</section>
+
+<section class="git-tip">
+<p><i>Pro Tips</i></p>
+<ul>
+  <li>Add a <code>.gitignore</code> file to ignore files/folders you don’t want to track (like <code>node_modules/</code>, <code>.env</code>, etc.).</li>
+  <li>Always use meaningful commit messages.</li>
+</ul>
+</section>
+
+</main>
+
+</body>
+</html>
+```

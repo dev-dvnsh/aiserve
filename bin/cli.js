@@ -26,7 +26,7 @@ program
     }
 
     if (!fs.existsSync(filePath)) {
-      console.log("❌ File not found");
+      console.log("File not found");
       process.exit(1);
     }
 

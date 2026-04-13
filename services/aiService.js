@@ -1,26 +1,26 @@
-import axios from "axios";
+import Groq from "groq-sdk";
 import dotenv from "dotenv";
-import { systemPrompt } from "../prompts/articlePrompt.js";
 
 dotenv.config();
 
-export async function generateHTML(content) {
-  const response = await axios.post(
-    "https://router.huggingface.co/v1/chat/completions",
-    {
-      model: "deepseek-ai/DeepSeek-V3",
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content },
-      ],
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.HF_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-    },
-  );
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY,
+});
 
-  return response.data.choices[0].message.content;
+export async function generateHTML(content, systemPrompt) {
+  const completion = await groq.chat.completions.create({
+    model: "llama-3.1-8b-instant",
+    messages: [
+      {
+        role: "system",
+        content: systemPrompt,
+      },
+      {
+        role: "user",
+        content: content,
+      },
+    ],
+  });
+
+  return completion.choices[0].message.content;
 }

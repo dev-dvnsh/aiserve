@@ -1,14 +1,25 @@
 {
   "name": "aiserve",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI tool that serves any file as an AI-generated webpage",
   "main": "index.js",
   "bin": {
     "aiserve": "./bin/cli.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "ai",
+    "groq",
+    "static-site",
+    "development-tool"
+  ],
+  "author": "dev-dvnsh",
+  "license": "MIT",
+  "homepage": "https://github.com/dev-dvnsh/aiserve",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-dvnsh/aiserve"
+  },
   "type": "module",
   "dependencies": {
     "axios": "^1.15.0",

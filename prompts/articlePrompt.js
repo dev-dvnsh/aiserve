@@ -28,7 +28,7 @@ Design requirements:
 • The layout should be modern, minimal, and visually balanced.
 
 Styling requirements:
-
+- make the website a little colorful dont just color text i mean use colorfully professinal backgrounds 
 • Include CSS inside a <style> tag.
 • Use a clean modern font stack.
 • Ensure consistent spacing and alignment.

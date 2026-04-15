@@ -26,3 +26,11 @@ export function saveCache(hash, html) {
   const file = path.join(cacheDir, `${hash}.html`);
   fs.writeFileSync(file, html);
 }
+
+export function deleteCachedHTML(hash) {
+  const file = path.join(cacheDir, `${hash}.html`);
+
+  if (fs.existsSync(file)) {
+    fs.unlinkSync(file);
+  }
+}

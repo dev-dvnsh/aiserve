@@ -1,0 +1,146 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input and Output in Python</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>Input and Output in Python</h1>
+
+<h2>Input Functions</h2>
+
+<p>The input function in Python is used to take user input. By default, it returns the user input in the form of a string.</p>
+
+<pre>
+name = input("Enter your name: ")
+print("Hello,", name, "! Welcome!")
+</pre>
+
+<p>Multiple input values can be taken at a time. The input function returns all values as a string, which can be split into individual values using the split() function.</p>
+
+<pre>
+x, y = input("Enter two values: ").split()
+print("Number of boys: ", x)
+print("Number of girls: ", y)
+
+x, y, z = input("Enter three values: ").split()
+print("Total number of students: ", x)
+print("Number of boys is : ", y)
+print("Number of girls is : ", z)
+</pre>
+
+<p>Input values can be taken as integers, floats, or other data types by using the int(), float(), or other type casting functions on the input value.</p>
+
+<pre>
+n = int(input("Enter a number"))
+print(n)
+
+price = float(input("Enter the decimal number"))
+print(price)
+</pre>
+
+<h2>Type Casting</h2>
+
+<p>Type casting in Python refers to the process of converting the value of one data type into another.</p>
+
+<pre>
+# Casting variables
+s = "10"  # Initially a string
+n = int(s)  # Cast string to integer
+cnt = 5
+f = float(cnt)  # Cast integer to float
+age = 25
+s2 = str(age)  # Cast integer to string
+
+# Display results
+print(n)  
+print(f)  
+print(s2)
+</pre>
+
+<h2>Output Formatting</h2>
+
+<p>Output formatting in Python can be done using a variety of techniques, including the format() method, sep and end parameters, f-strings, and the versatile % operator.</p>
+
+<pre>
+# Using format()
+amount = 150.7533
+print("Amount: ${:.2f}".format(amount))
+
+# Using sep and end parameters 
+print("Python", end='@')
+print("GeeksforGeeks")
+print('G', 'F', 'G', sep=',')
+print('09', '12', '2016', sep='-')
+
+# Using f-string
+name = 'Tushar'
+age = 23
+print(f"Hello, My name is {name} and I'm {age} years old.")
+
+# Using % operator
+num = int(input("Enter a value: "))
+add = num + 5
+print("The sum is %d" %add)
+</pre>
+
+<h2>Rules for Naming Variables</h2>
+
+<p>Variable names in Python can only contain letters, digits, and underscores. They cannot start with a digit, and are case-sensitive.</p>
+
+<h2>Delete a Variable Using del Keyword</h2>
+
+<pre>
+# Assigning value to variable
+x = 10
+print(x) 
+
+# Removing the variable using del
+del x
+
+# Trying to print x after deletion will raise an error
+# print(x)  # Uncommenting this line will raise NameError: name 'x' is not defined
+</pre>
+
+<h2>Getting List of all Python Keywords</h2>
+
+<pre>
+import keyword
+print("The list of keywords is : ")
+print(keyword.kwlist)
+</pre>
+
+</body>
+</html>
+```

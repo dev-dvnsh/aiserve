@@ -1,0 +1,142 @@
+**Devansh Bhardwaj's Website**
+
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devansh Bhardwaj's Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to my website</h1>
+            <p>I'm Devansh Bhardwaj, a web developer and designer.</p>
+            <button>Learn More</button>
+        </section>
+        <section id="about">
+            <h1>About me</h1>
+            <p>I have a passion for building and designing websites that are both functional and visually appealing.</p>
+            <img src="profile.jpg" alt="Devansh Bhardwaj's Profile Picture">
+        </section>
+        <section id="skills">
+            <h1>My Skills</h1>
+            <ul>
+                <li>Web Development</li>
+                <li>Web Design</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h1>Get in Touch</h1>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button>Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Devansh Bhardwaj</p>
+    </footer>
+</body>
+</html>
+```
+
+**styles.css**
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #f7f7f7;
+    padding: 2em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+```
+
+This website has a simple layout with a navigation menu, three sections (Home, About, and Contact), and a footer. The CSS is minimalistic and focuses on creating a clean and visually appealing design.
+
+The website uses the MIT License and is open-source, as specified in the initial MIT License notice.
+
+Note: You need to create a new file named `profile.jpg` in the same directory as `index.html` to display the profile picture in the About section.

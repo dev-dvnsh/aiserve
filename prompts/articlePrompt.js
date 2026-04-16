@@ -10,7 +10,8 @@ IMPORTANT RULES:
 1. Do NOT explain the document.
 2. Do NOT summarize the document.
 3. Do NOT describe what the document contains.
-4. Your output MUST be a complete HTML webpage only.
+4. Do NOT add anything from your side to the text keep the text as it is.
+5. Your output MUST be a complete HTML webpage only.
 
 Your task is to present the document content visually as a professional webpage.
 
